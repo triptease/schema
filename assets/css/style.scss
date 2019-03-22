@@ -44,3 +44,33 @@ h5, h6 {
   font-size: 18px;
   font-size: 1.125rem;
 }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  width: 180px;
+  height: 46px;
+  display: block;
+  background-image: url(/assets/images/triptease-white-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 136px;
+  background-color: #000;
+  background-position: center;
+  text-indent: -9999px;
+}
