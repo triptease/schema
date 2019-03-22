@@ -32,7 +32,7 @@ identify your hotel automatically
  "@context": "http://schema.org",
  "@type": "Hotel",
  "name": "Sea View Hotel",
- "brand": "Great Escapes"
+ "brand": "Great Escapes",
  "address": 
   {
   "@type": "PostalAddress",
@@ -43,6 +43,8 @@ identify your hotel automatically
   "addressCountry": "United Kingdom"
   },
  "telephone": "+44 1234 5678",
+ "image": "http://example.com/image.png",
+ "url": "http://example.com/"
 }
 </script>
 
@@ -61,7 +63,12 @@ identify your hotel automatically
         <span itemprop="postalCode">W1 9B</span>
         <span itemprop="addressCountry">United Kingdom</span>
     </div>
- <div>Telephone: <span itemprop="telephone">+44 1234 5678</span>
+ <div>Telephone: <span itemprop="telephone">+44 1234 5678</span></div>
+ <div>
+    <a href="http://example.com/" itemprop="url">
+        <img itemprop="image" src="http://example.com/image.png"/>
+    </a>
+ </div>
 </div>
 
 ```
@@ -100,7 +107,7 @@ This will allow Google to correctly list your contact details
 
 Used by: Google,
 
-#### link (Optional)
+#### url (Optional)
   
 This will allow Triptease and Google to link to your hotel home page.
 
