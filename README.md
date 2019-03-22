@@ -36,15 +36,33 @@ identify your hotel automatically
  "address": 
   {
   "@type": "PostalAddress",
-  "streetAddress": "Jalan Otto Iskandardinata No.16",
-  "addressLocality": "Bandung",
-  "addressRegion": "West Java",
-  "postalCode": "40171",
-  "addressCountry": "IDN"
+  "streetAddress": "1 Piccadilly",
+  "addressLocality": "St. James's",
+  "addressRegion": "London",
+  "postalCode": "W1 9B",
+  "addressCountry": "United Kingdom"
   },
- "telephone": "+62 22 424 0000",
+ "telephone": "+44 1234 5678",
 }
 </script>
+
+```
+
+#### Microdata Example
+
+```html
+<div class="hotel-page" itemscope itemtype="http://schema.org/Hotel">
+    <h1 itemprop="name">Sea View Hotel</h1>
+    <h2 itemprop="brand">Great Escapes</h1>
+    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">1 Piccadilly</span>
+        <span itemprop="addressLocality">St. James's</span>
+        <span itemprop="addressRegion">London</span>
+        <span itemprop="postalCode">W1 9B</span>
+        <span itemprop="addressCountry">United Kingdom</span>
+    </div>
+ <div>Telephone: <span itemprop="telephone">+44 1234 5678</span>
+</div>
 
 ```
 
@@ -97,9 +115,9 @@ Used by: Google
 
 ### More Reading
 
-[Markup for Hotels](https://schema.org/Hotel)
-
 [Leverage structured data to turbo-drive your click-through rate](https://www.triptease.com/blog/schema-hoteliers-leverage-structured-data/)
+
+[Markup for Hotels](https://schema.org/Hotel)
 
 [Understand how structured data works](https://developers.google.com/search/docs/guides/intro-structured-data)
 
@@ -109,6 +127,7 @@ Used by: Google
 
 [Schema Markup Generator](https://technicalseo.com/seo-tools/schema-markup-generator/)
 
+[Microdata](https://www.w3.org/TR/microdata/)
 
 ### Help
 
