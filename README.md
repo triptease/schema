@@ -20,7 +20,7 @@ There are different levels of support for meta data and it's best to start with 
 
 ### 1 - Identification
 
-This is the simplest and most important meta data you can add through out your marketing website and booking engine. Ideally you want this on every page that is focused on a single Hotel. 
+This is the simplest and most important meta data you can add through out your marketing website and booking engine. Ideally you want this on every page. 
 Doing this will also automatically allow your Hotel to appear on on Goggle search pages and Google Maps. Just putting the Hotel name and @type on each page will help Triptease 
 identify your hotel automatically 
 
@@ -32,6 +32,7 @@ identify your hotel automatically
  "@context": "http://schema.org",
  "@type": "Hotel",
  "name": "Sea View Hotel",
+ "identifier": "1234567",
  "brand": "Great Escapes",
  "address": 
   {
@@ -53,8 +54,9 @@ identify your hotel automatically
 #### Microdata Example
 
 ```html
-<div class="hotel-page" itemscope itemtype="http://schema.org/Hotel">
+<div itemscope itemtype="http://schema.org/Hotel">
     <h1 itemprop="name">Sea View Hotel</h1>
+    <span itemprop="identifier">123456</span>
     <h2 itemprop="brand">Great Escapes</h1>
     <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
         <span itemprop="streetAddress">1 Piccadilly</span>
@@ -88,12 +90,17 @@ The name should be unique within Group or Brand
 
 Used by: Google, Triptease
 
+#### identifier (Optional) 
+
+The identifier can be used set to a unique property ID
+
+Used by: Triptease
+
 #### brand (Optional)
   
 You can put the brand here or as part of the 'name' property but don't put it in both as this might cause the brand to appear twice in some tools.
 
 Used by: Triptease
-
 
 #### address (Optional)
   
