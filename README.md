@@ -5,7 +5,7 @@
 [schema.org](http://schema.org/) contains a rich vocabulary that can be used to help tools read and understand web pages in wide number of domains. 
 This page details the markup that can be added to a Hotel page to help not only Triptease products but also increase your SEO and Google listings.  
 
-Notice anything wrong please raise an [issue](https://github.com/triptease/schema/issues). 
+Notice anything wrong please raise an [issue](https://github.com/triptease/structured-data/issues). 
 
 ### Microdata vs RDFa vs JSON-LD
 
