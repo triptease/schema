@@ -1,4 +1,4 @@
-## Welcome to schema.triptease.io
+## Welcome to structured-data.triptease.io
 
 ### Overview
 
