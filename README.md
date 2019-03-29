@@ -224,7 +224,7 @@ The [priceCurrency](https://schema.org/priceCurrency) is the 3 digit ISO currenc
 
 [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool)
 
-[Scheam.org Generator](https://developers.brewerdigitalmarketing.com/generator)
+[Schema.org Generator](https://developers.brewerdigitalmarketing.com/generator)
 
 [Schema Markup Generator](https://technicalseo.com/seo-tools/schema-markup-generator/)
 
