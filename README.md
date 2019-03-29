@@ -18,7 +18,12 @@ Triptease supports all 3 formats so if you are already using one then don’t wo
 
 There are different levels of support for meta data and it's best to start with the simplest and work your way up to more advanced features as you get comfortable.
 
-### 1 - Identification
+1. [Identification](#identification)
+1. [Reservation](#reservation)
+
+
+
+### Identification
 
 This is the simplest and most important meta data you can add through out your marketing website and booking engine. Ideally you want this on every page. 
 Doing this will also automatically allow your Hotel to appear on on Goggle search pages and Google Maps. Just putting the Hotel name and @type on each page will help Triptease 
@@ -79,59 +84,141 @@ Lets walk through this:
 
 #### @type
 
-Make sure you set this to 'Hotel' rather than the more generic 'Organisation' 
-(Use Organisation in a separate metadata block to describe your organisation)
+Make sure you set this to [Hotel](https://schema.org/Hotel) rather than the more generic [Organisation](https://schema.org/Organisation)
+(Use Organisation in a separate metadata block to describe your parent organisation or group)
 
 Used by: Google, Triptease
 
 #### name 
 
-The name should be unique within Group or Brand
+The [name](https://schema.org/name) should be unique within Group or Brand
 
 Used by: Google, Triptease
 
 #### identifier (Optional) 
 
-The identifier can be used set to a unique property ID
+The [identifier](https://schema.org/identifier) can be used set to a unique property ID.
 
 Used by: Triptease
 
 #### brand (Optional)
   
-You can put the brand here or as part of the 'name' property but don't put it in both as this might cause the brand to appear twice in some tools.
+The [brand](https://schema.org/brand) can help Triptease group together your hotels.
 
 Used by: Triptease
 
 #### address (Optional)
   
-This will allow Triptease and Google to correctly associate your Hotel name with it's location.
+The [address](https://schema.org/address) allows Triptease and Google to correctly associate your Hotel with it's location. At a minimum add the [postalCode](https://schema.org/postalCode).
 
 Used by: Google, Triptease
 
 #### telephone (Optional)
   
-This will allow Google to correctly list your contact details
+The [telephone](https://schema.org/telephone) will allow Google to correctly list your contact details
 
 Used by: Google,
 
 #### url (Optional)
   
-This will allow Triptease and Google to link to your hotel home page.
+The [url](https://schema.org/url) will allow Triptease and Google to link to your hotel home page.
 
 Used by: Google, Triptease
 
 #### image (Optional)
   
-This will allow Google (Search and Maps) to display a thumbnail image next to your name
+The [image](https://schema.org/image) will allow Google (Search and Maps) to display a thumbnail image next to your name
 
 Used by: Google
+
+
+
+
+### Reservation
+
+After identifying the Hotel the next most important data you can provide is the reservation information after a customer completes their booking. 
+
+#### JSON-LD Example
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "LodgingReservation",
+  "reservationId": "abc456",
+  "reservationStatus": "http://schema.org/ReservationConfirmed",
+  "checkinTime": "2017-04-11T16:00:00-00:00",
+  "checkoutTime": "2017-04-13T11:00:00-00:00"
+  "totalPrice": "800.00"
+  "priceCurrency": "GBP"
+}
+</script>
+
+```
+
+#### Microdata Example
+
+```html
+<div itemscope itemtype="http://schema.org/LodgingReservation">
+    <h1>Reservation #<span itemprop="reservationId">abc456</span></h1>
+    <h2>Details</h2>
+    <dl>
+        <dt>Status</dt>
+        <dd itemprop="reservationStatus" content="http://schema.org/ReservationConfirmed">Confirmed</dd>
+        <dt>Checkin</dt>
+        <dd itemprop="checkinTime" content="2017-04-11T16:00:00-00:00">On 11th April from 4pm</dd>
+        <dt>Checkout</dt>
+        <dd itemprop="checkoutTime" content="2017-04-13T11:00:00-00:00">On 13th April by 11am</dd>
+        <dt>Total</dt>
+        <dd><span itemprop="totalPrice">800.00</span> <span itemprop="priceCurrency">GBP</span></dd>
+    </dl>
+</div>
+
+```
+
+Lets walk through this:
+
+#### @type
+
+Set this to [LodgingReservation](https://schema.org/LodgingReservation) 
+
+
+#### reservationId
+
+The [reservationId](https://schema.org/reservationId) should be unique and verifiable.  
+
+
+#### reservationStatus
+
+The [reservationStatus](https://schema.org/reservationStatus) should be set to [ReservationConfirmed](https://schema.org/ReservationConfirmed). 
+If you wish to expose reservations earlier in the funnel then make sure you use one of the other [ReservationStatusType](https://schema.org/ReservationStatusType).
+
+
+#### checkinTime
+
+The [checkinTime](https://schema.org/checkinTime) is a combination of date and time, it can not just be a time as the name might suggest.
+
+
+#### checkoutTime
+
+The [checkoutTime](https://schema.org/checkoutTime) is a combination of date and time, it can not just be a time as the name might suggest.
+
+#### totalPrice
+
+The [totalPrice](https://schema.org/totalPrice) is the total price for the duration of the stay including taxes etc. Does not include the currency symbol.
+
+#### priceCurrency
+
+The [priceCurrency](https://schema.org/priceCurrency) is the 3 digit ISO currency code. 
+
+
 
 
 ### More Reading
 
 [Leverage structured data to turbo-drive your click-through rate](https://www.triptease.com/blog/schema-hoteliers-leverage-structured-data/)
 
-[Markup for Hotels](https://schema.org/Hotel)
+[Markup for Hotels](https://schema.org/docs/hotels.html)
 
 [Understand how structured data works](https://developers.google.com/search/docs/guides/intro-structured-data)
 
@@ -142,6 +229,9 @@ Used by: Google
 [Schema Markup Generator](https://technicalseo.com/seo-tools/schema-markup-generator/)
 
 [Microdata](https://www.w3.org/TR/microdata/)
+
+
+
 
 ### Help
 
