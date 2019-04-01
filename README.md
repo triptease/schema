@@ -2,21 +2,21 @@
 
 ### Overview
 
-[schema.org](http://schema.org/) contains a rich vocabulary that can be used to help tools read and understand web pages in wide number of domains. 
-This page details the markup that can be added to a Hotel page to help not only Triptease products but also increase your SEO and Google listings.  
+[Schema.org](http://schema.org/) contains a rich vocabulary that can be used to help tools read and understand web pages in wide number of domains. 
+This page details the markup that can be added to a hotel website for the benefit of not only Triptease products but also your SEO and Google listings.  
 
-Notice anything wrong please raise an [issue](https://github.com/triptease/structured-data/issues). 
+If you notice anything wrong please raise an [issue](https://github.com/triptease/structured-data/issues). 
 
 ### Microdata vs RDFa vs JSON-LD
 
-If the markup is static (like your Hotel name and address) then JSON-LD is generally the easiest to test and debug, while if the meta data is more dynamic (like offers or rate details) 
+If the markup is static (like your hotel name and address) then JSON-LD is generally the easiest to test and debug, while if the meta data is more dynamic (like offers or rate details) 
 you may want to use the microdata format embedded in the HTML so that you keep the UI in sync with the meta data.
 
-Triptease supports all 3 formats so if you are already using one then don’t worry about switching.
+Triptease supports all three formats so if you are already using one then don’t worry about switching.
 
 ### Getting started
 
-There are different levels of support for meta data and it's best to start with the simplest and work your way up to more advanced features as you get comfortable.
+There are different levels of support for meta-data, it's best to start with the simplest and work your way up to more advanced features as you get more comfortable.
 
 1. [Identification](#identification)
 1. [Reservation](#reservation)
@@ -26,7 +26,7 @@ There are different levels of support for meta data and it's best to start with 
 ### Identification
 
 This is the simplest and most important meta data you can add through out your marketing website and booking engine. Ideally you want this on every page. 
-Doing this will also automatically allow your Hotel to appear on on Goggle search pages and Google Maps. Just putting the Hotel name and @type on each page will help Triptease 
+Doing this will automatically allow your hotel to appear on Google search pages and Google Maps. Just putting the hotel name and @type on each page will help Triptease 
 identify your hotel automatically 
 
 #### JSON-LD Example
@@ -91,7 +91,7 @@ Used by: Google, Triptease
 
 #### name 
 
-The [name](https://schema.org/name) should be unique within Group or Brand
+The [name](https://schema.org/name) should be unique within your group or brand.
 
 Used by: Google, Triptease
 
@@ -103,7 +103,7 @@ Used by: Triptease
 
 #### brand (Optional)
   
-The [brand](https://schema.org/brand) can help Triptease group together your hotels.
+The [brand](https://schema.org/brand) can help Triptease group your hotels together.
 
 Used by: Triptease
 
@@ -136,7 +136,7 @@ Used by: Google
 
 ### Reservation
 
-After identifying the Hotel the next most important data you can provide is the reservation information after a customer completes their booking. 
+After identifying the hotel, the next-most important data you can provide is the reservation information after a customer completes their booking. 
 
 #### JSON-LD Example
 
@@ -196,25 +196,25 @@ If you wish to expose reservations earlier in the funnel then make sure you use 
 
 #### checkinTime
 
-The [checkinTime](https://schema.org/checkinTime) is a combination of date and time, it can not just be a time as the name might suggest.
+The [checkinTime](https://schema.org/checkinTime) is a combination of date and time. It cannot be just a time (despite what the name suggests).
 
 
 #### checkoutTime
 
-The [checkoutTime](https://schema.org/checkoutTime) is a combination of date and time, it can not just be a time as the name might suggest.
+The [checkoutTime](https://schema.org/checkoutTime) is a combination of date and time. It cannot be just a time (despite what the name suggests).
 
 #### totalPrice
 
-The [totalPrice](https://schema.org/totalPrice) is the total price for the duration of the stay including taxes etc. Does not include the currency symbol.
+The [totalPrice](https://schema.org/totalPrice) is the total price for the duration of the stay including taxes etc. It does not include the currency symbol.
 
 #### priceCurrency
 
-The [priceCurrency](https://schema.org/priceCurrency) is the 3 digit ISO currency code. 
+The [priceCurrency](https://schema.org/priceCurrency) is the three digit ISO currency code. 
 
 
 
 
-### More Reading
+### Further Reading
 
 [Leverage structured data to turbo-drive your click-through rate](https://www.triptease.com/blog/schema-hoteliers-leverage-structured-data/)
 
@@ -235,4 +235,4 @@ The [priceCurrency](https://schema.org/priceCurrency) is the 3 digit ISO currenc
 
 ### Help
 
-If you are having trouble then why not reach out to your Customer Success Manager or Direct Booking Coach
+If you are having trouble then do reach out to your Customer Success Manager or Direct Booking Coach.
