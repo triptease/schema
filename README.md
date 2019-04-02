@@ -148,8 +148,8 @@ After identifying the hotel, the next-most important data you can provide is the
   "reservationId": "abc456",
   "reservationStatus": "http://schema.org/ReservationConfirmed",
   "checkinTime": "2017-04-11T16:00:00-00:00",
-  "checkoutTime": "2017-04-13T11:00:00-00:00"
-  "totalPrice": "800.00"
+  "checkoutTime": "2017-04-13T11:00:00-00:00",
+  "totalPrice": "800.00",
   "priceCurrency": "GBP"
 }
 </script>
