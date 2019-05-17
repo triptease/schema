@@ -307,7 +307,7 @@ These are the offer or rooms and rates the hotel has available for the specified
     "identifier": "DD-001"
   },
   "name": "Best Available Rate",
-  "identifier": "BAR-001"
+  "identifier": "BAR-001",
   "priceSpecification": {
     "@type": "UnitPriceSpecification",
     "price": "99.00",
