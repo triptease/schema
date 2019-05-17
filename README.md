@@ -216,13 +216,7 @@ The [priceCurrency](https://schema.org/priceCurrency) is the three digit ISO cur
 
 *Experimental please contact your Direct Booking Coach before using*
 
-The final piece of the puzzle is to expose the structured data for when a customer searches for a hotel room. This is normally on the rooms and rates page 
-but [schema.org](http://www.schema.org/) models this around [offers](http://schema.org/Offer) for [hotel rooms](http://schema.org/HotelRoom). This image explains the concept:
-
-![Schema Diagram showing the relationship between entities](https://schema.org/docs/schema_hotels_1.png)
-
-
-This is actually made up of two parts:
+The final piece of the puzzle is to expose the structured data for when a customer searches for a hotel room. This is actually made up of two parts:
 
 1. [Lodging Search](#lodging-search)
 2. [Offers for Hotel Rooms](#offers-for-hotel-rooms)
@@ -295,7 +289,10 @@ The [numRooms](https://schema.org/numRooms) is the total number of rooms that we
 
 *Used by: Triptease and other hotel specific tools*
 
-These are the offer or rooms and rates the hotel has available for the specified dates.
+These are the offer or rooms and rates the hotel has available for the specified dates normally displayed on the rooms and rates page. 
+[schema.org](http://www.schema.org/) models this around [offers](http://schema.org/Offer) for [hotel rooms](http://schema.org/HotelRoom). This image explains the concept:
+                                                                                        
+![Schema Diagram showing the relationship between entities](https://schema.org/docs/schema_hotels_1.png)
 
 #### JSON-LD Example
 
