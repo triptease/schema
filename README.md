@@ -342,15 +342,15 @@ Set this to [Offer](http://schema.org/Offer)
 
 #### itemOffered
 
-The [itemOffered](https://schema.org/itemOffered) should link to a [HotelRoom](https://schema.org/HotelRoom) with a [name](https://schema.org/name) and optional [identifier](https://schema.org/identifier) for room type.
+The [itemOffered](https://schema.org/itemOffered) should link to a [HotelRoom](https://schema.org/HotelRoom) with a room [name](https://schema.org/name) and optional [identifier](https://schema.org/identifier) for the room type.
 
 #### name
 
-The [name](https://schema.org/name) this is the rate name
+The [name](https://schema.org/name) should contain the rate name
 
 #### identifier (Optional) 
 
-The [identifier](https://schema.org/identifier) can be used set to rate code
+The [identifier](https://schema.org/identifier) can be used to set a rate code
 
 #### priceSpecification
 
