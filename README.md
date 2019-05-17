@@ -54,7 +54,6 @@ identify your hotel automatically
  "url": "http://example.com/"
 }
 </script>
-
 ```
 
 #### Microdata Example
@@ -78,7 +77,6 @@ identify your hotel automatically
     </a>
  </div>
 </div>
-
 ```
 
 Lets walk through this:
@@ -154,7 +152,6 @@ After identifying the hotel, the next-most important data you can provide is the
   "priceCurrency": "GBP"
 }
 </script>
-
 ```
 
 #### Microdata Example
@@ -174,7 +171,6 @@ After identifying the hotel, the next-most important data you can provide is the
         <dd><span itemprop="totalPrice">800.00</span> <span itemprop="priceCurrency">GBP</span></dd>
     </dl>
 </div>
-
 ```
 
 Lets walk through this:
@@ -243,7 +239,6 @@ these additional parameters while trying to keep to the same naming conventions 
   "numRooms": 1
 }
 </script>
-
 ```
 
 #### Microdata Example
@@ -256,7 +251,6 @@ these additional parameters while trying to keep to the same naming conventions 
     <input itemprop="numChildren" name="children" type="hidden" value="0"/>
     <input itemprop="numRooms" name="rooms" type="hidden" value="1"/>
 </div>
-
 ```
 
 Lets walk through this:
