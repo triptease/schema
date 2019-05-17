@@ -217,8 +217,8 @@ The [priceCurrency](https://schema.org/priceCurrency) is the three digit ISO cur
 The final piece of the puzzle is to expose the structured data for when a customer searches for a hotel room. This is normally on what is called the rooms and rates page 
 but [schema.org](http://www.schema.org/) models this around a concept called [Offers](http://schema.org/Offer). This is actually made up of two parts:
 
-1. [Search Parameters](#searchparameters)
-2. [Search Results](#searchresults)
+1. [Search Parameters](#search-parameters)
+2. [Search Results](#search-results)
 
 ### Search Parameters
 
