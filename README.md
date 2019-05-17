@@ -116,7 +116,7 @@ Used by: Google, Triptease
   
 The [telephone](https://schema.org/telephone) will allow Google to correctly list your contact details
 
-Used by: Google,
+Used by: Google
 
 #### url (Optional)
   
@@ -136,6 +136,8 @@ Used by: Google
 ### Reservation
 
 After identifying the hotel, the next-most important data you can provide is the reservation information after a customer completes their booking. 
+
+Used by: Triptease and other hotel specific tools
 
 #### JSON-LD Example
 
@@ -215,12 +217,19 @@ The [priceCurrency](https://schema.org/priceCurrency) is the three digit ISO cur
 *Experimental please contact your Direct Booking Coach before using*
 
 The final piece of the puzzle is to expose the structured data for when a customer searches for a hotel room. This is normally on what is called the rooms and rates page 
-but [schema.org](http://www.schema.org/) models this around a concept called [Offers](http://schema.org/Offer). This is actually made up of two parts:
+but [schema.org](http://www.schema.org/) models this around [offers](http://schema.org/Offer) for [hotel rooms](http://schema.org/HotelRoom). This image explains the concept:
 
-1. [Search Parameters](#search-parameters)
-2. [Search Results](#search-results)
+![Schema Diagram showing the relationship between entities](https://schema.org/docs/schema_hotels_1.png)
 
-### Search Parameters
+
+This is actually made up of two parts:
+
+1. [Lodging Search](#lodging-search)
+2. [Offers for Hotel Rooms](#offers-for-hotel-rooms)
+
+### Lodging Search
+
+*Used by: Triptease*
 
 These are the parameters the customer searched with. [schema.org](http://www.schema.org/) does not directly model these concepts so TripTease has made a small extension to capture
 these additional parameters while trying to keep to the same naming conventions and domain language.
@@ -234,9 +243,9 @@ these additional parameters while trying to keep to the same naming conventions 
   "@type": "LodgingSearch",
   "checkinTime": "2017-04-11T12:00:00-00:00",
   "checkoutTime": "2017-04-13T12:00:00-00:00",
-  "numAdults": 2
-  "numChildren": 0
-  "numRooms": 1
+  "numAdults": "2",
+  "numChildren": "0",
+  "numRooms": "1"
 }
 </script>
 ```
@@ -245,11 +254,12 @@ these additional parameters while trying to keep to the same naming conventions 
 
 ```html
 <div itemscope itemtype="https://structured-data.triptease.io/LodgingSearch">
-    <input itemprop="checkinTime" name="checkin" type="hidden" value="2017-04-11T12:00:00-00:00"/>
-    <input itemprop="checkoutTime" name="checkout" type="hidden" value="2017-04-13T12:00:00-00:00"/>
-    <input itemprop="numAdults" name="adults" type="hidden" value="2"/>
-    <input itemprop="numChildren" name="children" type="hidden" value="0"/>
-    <input itemprop="numRooms" name="rooms" type="hidden" value="1"/>
+    <meta itemprop="checkinTime" content="2017-04-11T12:00:00-00:00">
+    <meta itemprop="checkinTime" content="2017-04-11T12:00:00-00:00"/>
+    <meta itemprop="checkoutTime" content="2017-04-13T12:00:00-00:00"/>
+    <meta itemprop="numAdults"  content="2"/>
+    <meta itemprop="numChildren" content="0"/>
+    <meta itemprop="numRooms" content="1"/>
 </div>
 ```
 
@@ -257,30 +267,97 @@ Lets walk through this:
 
 #### @type
 
-Set this to [LodgingSearch](https://structured-data.triptease.io/LodgingSearch) 
-
+Set this to [LodgingSearch](#lodging-search) 
 
 #### checkinTime
 
 The [checkinTime](https://schema.org/checkinTime) is a combination of date and time. We actually are only interested in the date and in the example just default the time to midday. 
 
-
 #### checkoutTime
 
 The [checkoutTime](https://schema.org/checkoutTime) is a combination of date and time. We actually are only interested in the date and in the example just default the time to midday.
 
-#### numAdults
+#### numAdults (Optional default to 2)
 
 The [numAdults](https://schema.org/numAdults) is the total number of adults that were searched for.
 
-#### numAdults
+#### numChildren (Optional default to 0)
 
 The [numChildren](https://schema.org/numChildren) is the total number of children that were searched for.
 
-#### numRooms
+#### numRooms (Optional default to 1)
 
 The [numRooms](https://schema.org/numRooms) is the total number of rooms that were searched for.
 
+
+
+### Offers for Hotel Rooms
+
+*Used by: Triptease and other hotel specific tools*
+
+These are the offer or rooms and rates the hotel has available for the specified dates.
+
+#### JSON-LD Example
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Offer",
+  "itemOffered": {
+    "@type": "HotelRoom",
+    "name": "Deluxe Double",
+    "identifier": "DD-001"
+  },
+  "name": "Best Available Rate",
+  "identifier": "BAR-001"
+  "priceSpecification": {
+    "@type": "UnitPriceSpecification",
+    "price": "99.00",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+```
+
+#### Microdata Example
+
+```html
+<div itemscope itemtype="http://schema.org/Offer">
+  <div itemprop="itemOffered" itemscope itemtype="http://schema.org/HotelRoom">
+      <span itemprop="name">Deluxe Double</span>
+      <meta itemprop="identifier" content="DD-001">
+  </div>
+  <span itemprop="name">Best Available Rate</span>
+  <meta itemprop="identifier" content="BAR-001">
+  <span itemprop="priceSpecification" itemscope itemtype="http://schema.org/UnitPriceSpecification">
+    <meta itemprop="price" content="99.00">$99.00
+    <meta itemprop="priceCurrency" content="USD">
+  </span>
+</div>
+```
+
+Lets walk through this:
+
+#### @type
+
+Set this to [Offer](http://schema.org/Offer) 
+
+#### itemOffered
+
+The [itemOffered](https://schema.org/itemOffered) should link to a [HotelRoom](https://schema.org/HotelRoom) with a [name](https://schema.org/name) and optional [identifier](https://schema.org/identifier) for room type.
+
+#### name
+
+The [name](https://schema.org/name) this is the rate name
+
+#### identifier (Optional) 
+
+The [identifier](https://schema.org/identifier) can be used set to rate code
+
+#### priceSpecification
+
+The [priceSpecification](https://schema.org/UnitPriceSpecification) contains the [price](https://schema.org/price) and [currency](https://schema.org/currency).
 
 
 
