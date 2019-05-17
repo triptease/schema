@@ -261,7 +261,7 @@ Lets walk through this:
 
 #### @type
 
-Set this to [LodgingSearch](#lodging-search) 
+Set this to LodgingSearch* 
 
 #### checkinTime
 
@@ -283,8 +283,9 @@ The [numChildren](https://schema.org/numChildren) is the total number of childre
 
 #### numRooms (Optional)
 
-The [numRooms](https://schema.org/numRooms) is the total number of rooms that were searched for. Defaults to 1
+The numRooms*  is the total number of rooms that were searched for. Defaults to 1
 
+**A Triptease extension*
 
 
 ### Offers for Hotel Rooms
