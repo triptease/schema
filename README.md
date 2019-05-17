@@ -289,7 +289,7 @@ The [numRooms](https://schema.org/numRooms) is the total number of rooms that we
 
 *Used by: Triptease and other hotel specific tools*
 
-These are the offer or rooms and rates the hotel has available for the specified dates normally displayed on the rooms and rates page. 
+These are the offer or rooms and rates the hotel has available for the specified dates. 
 [schema.org](http://www.schema.org/) models this around [offers](http://schema.org/Offer) for [hotel rooms](http://schema.org/HotelRoom). This image explains the concept:
                                                                                         
 ![Schema Diagram showing the relationship between entities](https://schema.org/docs/schema_hotels_1.png)
