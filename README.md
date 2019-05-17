@@ -19,7 +19,8 @@ Triptease supports all three formats so if you are already using one then don’
 There are different levels of support for meta-data, it's best to start with the simplest and work your way up to more advanced features as you get more comfortable.
 
 1. [Identification](#identification)
-1. [Reservation](#reservation)
+2. [Reservation](#reservation)
+3. [Search](#search)
 
 
 
@@ -210,6 +211,80 @@ The [totalPrice](https://schema.org/totalPrice) is the total price for the durat
 #### priceCurrency
 
 The [priceCurrency](https://schema.org/priceCurrency) is the three digit ISO currency code. 
+
+
+
+### Search
+
+The final piece of the puzzle is to expose the structured data for when a customer searches for a hotel room. This is normally on what is called the rooms and rates page 
+but [schema.org](http://www.schema.org/) models this around a concept called [Offers](http://schema.org/Offer). This is actually made up of two parts:
+
+1. [Search Parameters](#searchparameters)
+2. [Search Results](#searchresults)
+
+### Search Parameters
+
+These are the parameters the customer searched with. [schema.org](http://www.schema.org/) does not directly model these concepts so TripTease has made a small extension to capture
+these additional parameters while trying to keep to the same naming conventions and domain language.
+
+#### JSON-LD Example
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://structured-data.triptease.io/",
+  "@type": "LodgingSearch",
+  "checkinTime": "2017-04-11T12:00:00-00:00",
+  "checkoutTime": "2017-04-13T12:00:00-00:00",
+  "numAdults": 2
+  "numChildren": 0
+  "numRooms": 1
+}
+</script>
+
+```
+
+#### Microdata Example
+
+```html
+<div itemscope itemtype="https://structured-data.triptease.io/LodgingSearch">
+    <input itemprop="checkinTime" name="checkin" type="hidden" value="2017-04-11T12:00:00-00:00"/>
+    <input itemprop="checkoutTime" name="checkout" type="hidden" value="2017-04-13T12:00:00-00:00"/>
+    <input itemprop="numAdults" name="adults" type="hidden" value="2"/>
+    <input itemprop="numChildren" name="children" type="hidden" value="0"/>
+    <input itemprop="numRooms" name="rooms" type="hidden" value="1"/>
+</div>
+
+```
+
+Lets walk through this:
+
+#### @type
+
+Set this to [LodgingSearch](https://structured-data.triptease.io/LodgingSearch) 
+
+
+#### checkinTime
+
+The [checkinTime](https://schema.org/checkinTime) is a combination of date and time. We actually are only interested in the date and in the example just default the time to midday. 
+
+
+#### checkoutTime
+
+The [checkoutTime](https://schema.org/checkoutTime) is a combination of date and time. We actually are only interested in the date and in the example just default the time to midday.
+
+#### numAdults
+
+The [numAdults](https://schema.org/numAdults) is the total number of adults that were searched for.
+
+#### numAdults
+
+The [numChildren](https://schema.org/numChildren) is the total number of children that were searched for.
+
+#### numRooms
+
+The [numRooms](https://schema.org/numRooms) is the total number of rooms that were searched for.
+
 
 
 
