@@ -265,23 +265,25 @@ Set this to [LodgingSearch](#lodging-search)
 
 #### checkinTime
 
-The [checkinTime](https://schema.org/checkinTime) is a combination of date and time. We actually are only interested in the date and in the example just default the time to midday. 
+The [checkinTime](https://schema.org/checkinTime) is a combination of date and time. 
+We are using the same property as defined for a [LodgingReservation](https://schema.org/LodgingReservation) for consistency even though we are actually only interested in the date part. 
 
 #### checkoutTime
 
-The [checkoutTime](https://schema.org/checkoutTime) is a combination of date and time. We actually are only interested in the date and in the example just default the time to midday.
+The [checkoutTime](https://schema.org/checkoutTime) is a combination of date and time. 
+We are using the same property as defined for a [LodgingReservation](https://schema.org/LodgingReservation) for consistency even though we are actually only interested in the date part.
 
-#### numAdults (Optional default to 2)
+#### numAdults (Optional)
 
-The [numAdults](https://schema.org/numAdults) is the total number of adults that were searched for.
+The [numAdults](https://schema.org/numAdults) is the total number of adults that were searched for. Defaults to 2
 
-#### numChildren (Optional default to 0)
+#### numChildren (Optional)
 
-The [numChildren](https://schema.org/numChildren) is the total number of children that were searched for.
+The [numChildren](https://schema.org/numChildren) is the total number of children that were searched for. Defaults to 0
 
-#### numRooms (Optional default to 1)
+#### numRooms (Optional)
 
-The [numRooms](https://schema.org/numRooms) is the total number of rooms that were searched for.
+The [numRooms](https://schema.org/numRooms) is the total number of rooms that were searched for. Defaults to 1
 
 
 
