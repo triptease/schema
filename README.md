@@ -86,49 +86,49 @@ Lets walk through this:
 Make sure you set this to [Hotel](https://schema.org/Hotel) rather than the more generic [Organisation](https://schema.org/Organisation)
 (Use Organisation in a separate metadata block to describe your parent organisation or group)
 
-Used by: Google, Triptease
+*Used by: Google, Triptease*
 
 #### name 
 
 The [name](https://schema.org/name) should be unique within your group or brand.
 
-Used by: Google, Triptease
+*Used by: Google, Triptease*
 
 #### identifier (Optional) 
 
 The [identifier](https://schema.org/identifier) can be used set to a unique property ID.
 
-Used by: Triptease
+*Used by: Triptease*
 
 #### brand (Optional)
   
 The [brand](https://schema.org/brand) can help Triptease group your hotels together.
 
-Used by: Triptease
+*Used by: Triptease*
 
 #### address (Optional)
   
 The [address](https://schema.org/address) allows Triptease and Google to correctly associate your Hotel with it's location. At a minimum add the [postalCode](https://schema.org/postalCode).
 
-Used by: Google, Triptease
+*Used by: Google, Triptease*
 
 #### telephone (Optional)
   
 The [telephone](https://schema.org/telephone) will allow Google to correctly list your contact details
 
-Used by: Google
+*Used by: Google*
 
 #### url (Optional)
   
 The [url](https://schema.org/url) will allow Triptease and Google to link to your hotel home page.
 
-Used by: Google, Triptease
+*Used by: Google, Triptease*
 
 #### image (Optional)
   
 The [image](https://schema.org/image) will allow Google (Search and Maps) to display a thumbnail image next to your name
 
-Used by: Google
+*Used by: Google*
 
 
 
@@ -137,7 +137,7 @@ Used by: Google
 
 After identifying the hotel, the next-most important data you can provide is the reservation information after a customer completes their booking. 
 
-Used by: Triptease and other hotel specific tools
+*Used by: Triptease*
 
 #### JSON-LD Example
 
@@ -290,7 +290,7 @@ The numRooms*  is the total number of rooms that were searched for. Defaults to 
 
 ### Offers for Hotel Rooms
 
-*Used by: Triptease and other hotel specific tools*
+*Used by: Triptease*
 
 These are the offer or rooms and rates the hotel has available for the specified search parameters. 
 [schema.org](http://www.schema.org/) models this around [offers](http://schema.org/Offer) for [hotel rooms](http://schema.org/HotelRoom). This image explains the concept:
