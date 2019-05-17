@@ -351,7 +351,7 @@ Set this to [Offer](http://schema.org/Offer)
 
 #### itemOffered
 
-The [itemOffered](https://schema.org/itemOffered) should link to a [HotelRoom](https://schema.org/HotelRoom) with a room [name](https://schema.org/name) and optional [identifier](https://schema.org/identifier) for the room type.
+The [itemOffered](https://schema.org/itemOffered) should link to a [HotelRoom](https://schema.org/HotelRoom) with a room [name](https://schema.org/name) or type and optional [identifier](https://schema.org/identifier) for the room code.
 
 #### name
 
