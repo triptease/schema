@@ -297,6 +297,8 @@ These are the offer or rooms and rates the hotel has available for the specified
                                                                                         
 ![Schema Diagram showing the relationship between entities](https://schema.org/docs/schema_hotels_1.png)
 
+Multiple offers can added to a page either inside a single script tag containing an array or multiple script/div tags etc.
+
 #### JSON-LD Example
 
 ```html
