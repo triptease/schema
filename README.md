@@ -233,7 +233,7 @@ these additional parameters while trying to keep to the same naming conventions 
 ```html
 <script type="application/ld+json">
 {
-  "@context": "https://structured-data.triptease.io/",
+  "@context": "https://structured-data.triptease.io",
   "@type": "LodgingSearch",
   "checkinTime": "2017-04-11T12:00:00-00:00",
   "checkoutTime": "2017-04-13T12:00:00-00:00",
@@ -259,6 +259,10 @@ these additional parameters while trying to keep to the same naming conventions 
 
 Lets walk through this:
 
+#### @context
+
+Set this to https://structured-data.triptease.io 
+
 #### @type
 
 Set this to LodgingSearch* 
@@ -283,7 +287,7 @@ The [numChildren](https://schema.org/numChildren) is the total number of childre
 
 #### numRooms (Optional)
 
-The numRooms*  is the total number of rooms that were searched for. Defaults to 1
+The numRooms* is the total number of rooms that were searched for. Defaults to 1
 
 **A Triptease extension*
 
