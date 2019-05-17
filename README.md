@@ -216,7 +216,7 @@ The [priceCurrency](https://schema.org/priceCurrency) is the three digit ISO cur
 
 *Experimental please contact your Direct Booking Coach before using*
 
-The final piece of the puzzle is to expose the structured data for when a customer searches for a hotel room. This is normally on what is called the rooms and rates page 
+The final piece of the puzzle is to expose the structured data for when a customer searches for a hotel room. This is normally on the rooms and rates page 
 but [schema.org](http://www.schema.org/) models this around [offers](http://schema.org/Offer) for [hotel rooms](http://schema.org/HotelRoom). This image explains the concept:
 
 ![Schema Diagram showing the relationship between entities](https://schema.org/docs/schema_hotels_1.png)
