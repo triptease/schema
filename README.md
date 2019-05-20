@@ -248,7 +248,6 @@ these additional parameters while trying to keep to the same naming conventions 
 
 ```html
 <div itemscope itemtype="https://structured-data.triptease.io/LodgingSearch">
-    <meta itemprop="checkinTime" content="2017-04-11T12:00:00-00:00">
     <meta itemprop="checkinTime" content="2017-04-11T12:00:00-00:00"/>
     <meta itemprop="checkoutTime" content="2017-04-13T12:00:00-00:00"/>
     <meta itemprop="numAdults"  content="2"/>
