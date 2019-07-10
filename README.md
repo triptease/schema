@@ -151,6 +151,7 @@ After identifying the hotel, the next-most important data you can provide is the
   "checkinTime": "2017-04-11T16:00:00-00:00",
   "checkoutTime": "2017-04-13T11:00:00-00:00",
   "totalPrice": "800.00",
+  "basePrice": "750.00",
   "priceCurrency": "GBP"
 }
 </script>
@@ -171,6 +172,7 @@ After identifying the hotel, the next-most important data you can provide is the
         <dd itemprop="checkoutTime" content="2017-04-13T11:00:00-00:00">On 13th April by 11am</dd>
         <dt>Total</dt>
         <dd><span itemprop="totalPrice">800.00</span> <span itemprop="priceCurrency">GBP</span></dd>
+        <dd><span itemprop="basePrice">750.00</span> <span>GBP</span></dd>
     </dl>
 </div>
 ```
@@ -204,7 +206,11 @@ The [checkoutTime](https://schema.org/checkoutTime) is a combination of date and
 
 #### totalPrice
 
-The [totalPrice](https://schema.org/totalPrice) is the total price for the duration of the stay including taxes etc. It does not include the currency symbol.
+The [totalPrice](https://schema.org/totalPrice) is the total price for the duration of the stay *including* taxes etc. It does not include the currency symbol.
+
+#### basePrice (Optional)
+
+The basePrice is the base price for the duration of the stay *excluding* taxes etc. It does not include the currency symbol.
 
 #### priceCurrency
 
