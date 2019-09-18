@@ -199,10 +199,16 @@ If you wish to expose reservations earlier in the funnel then make sure you use 
 
 The [checkinTime](https://schema.org/checkinTime) is a combination of date and time. It cannot be just a time (despite what the name suggests).
 
+Ensure this is in the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format (YYYY-MM-DD).
+So 9th April 2020 would become `2020-04-09`
+
 
 #### checkoutTime
 
 The [checkoutTime](https://schema.org/checkoutTime) is a combination of date and time. It cannot be just a time (despite what the name suggests).
+
+Ensure this is in the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format (YYYY-MM-DD).
+So 9th April 2020 would become `2020-04-09`
 
 #### totalPrice
 
