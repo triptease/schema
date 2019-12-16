@@ -331,7 +331,8 @@ Multiple offers can added to a page either inside a single script tag containing
   "priceSpecification": {
     "@type": "UnitPriceSpecification",
     "price": "99.00",
-    "priceCurrency": "USD"
+    "priceCurrency": "USD",
+    "unitText": "Nightly"
   }
 }
 </script>
@@ -350,6 +351,7 @@ Multiple offers can added to a page either inside a single script tag containing
   <span itemprop="priceSpecification" itemscope itemtype="http://schema.org/UnitPriceSpecification">
     <meta itemprop="price" content="99.00">$99.00
     <meta itemprop="priceCurrency" content="USD">
+    <meta itemprop="unitText" content="Nightly">per night
   </span>
 </div>
 ```
@@ -374,10 +376,13 @@ The [identifier](https://schema.org/identifier) can be used to set a rate code
 
 #### priceSpecification
 
-The [priceSpecification](https://schema.org/UnitPriceSpecification) contains the [price](https://schema.org/price) and [currency](https://schema.org/currency).
+The [priceSpecification](https://schema.org/UnitPriceSpecification) contains the [price](https://schema.org/price) and [currency](https://schema.org/currency):
+ 
+price: The numeric value of the offer
 
+currency: The 3 character currency code of the offer
 
-
+unitText (optional): "Total" if the price is for the entire stay. "Nightly" if the price is per night. Defaults to "Nightly".
 
 ### Further Reading
 
