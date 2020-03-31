@@ -83,8 +83,8 @@ Lets walk through this:
 
 #### @type
 
-Make sure you set this to [Hotel](https://schema.org/Hotel) rather than the more generic [Organization](https://schema.org/Organization)
-(Use Organization in a separate metadata block to describe your parent organisation or group)
+Make sure you set this to [Hotel](https://schema.org/Hotel), [LodgingBusiness](https://schema.org/LodgingBusiness) or [BedAndBreakfast](https://schema.org/BedAndBreakfast) rather than the more generic [WebSite](https://schema.org/WebSite), [LocalBusiness](https://schema.org/LocalBusiness) or [Organization](https://schema.org/Organization).
+(Use Organization in a separate metadata block to describe your parent organisation or group if needed)
 
 *Used by: Google, Triptease*
 
