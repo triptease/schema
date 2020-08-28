@@ -135,7 +135,7 @@ The [image](https://schema.org/image) will allow Google (Search and Maps) to dis
 
 ### Reservation
 
-After identifying the hotel, the next-most important data you can provide is the reservation information after a customer completes their booking. 
+After identifying the hotel, the next-most important data you can provide is the reservation information after a customer completes their booking. If you support multi room booking just repeat the script tag  or itemScope root element (use an array in JSON-LD).
 
 *Used by: Triptease*
 
