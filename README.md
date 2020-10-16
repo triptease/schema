@@ -22,7 +22,10 @@ There are different levels of support for meta-data, it's best to start with the
 * [Reservation](#reservation)
 * [Lodging Search](#lodging-search)
 * [Offers for Hotel Rooms](#offers-for-hotel-rooms)
-  * [No availability](#no-availability)
+
+Advanced
+* [No availability](#no-availability)
+* [Application details](#application-details)
 
 
 ### Identification
@@ -377,6 +380,7 @@ currency: The 3 character currency code of the offer
 
 unitText (optional): "Total" if the price is for the entire stay. "Nightly" if the price is per night. Defaults to "Nightly".
 
+## Advanced
 
 ### No availability
 
@@ -413,7 +417,52 @@ Set this to [OfferCatalog](http://schema.org/OfferCatalog)
 
 #### numberOfItems
 
-Just set this to zero so we know you have no availability
+Just set this to zero so we know you have no availability. See https://schema.org/numberOfItems
+
+
+
+
+### Application Details
+
+*Used by: Triptease*
+
+This allows you to tell us about your booking engine or marketing site. This is used purely for diagnosis 
+
+#### JSON-LD Example
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "SoftwareApplication",
+  "name": "AwesomeBookingEngine",
+  "version" "12.43"
+}
+</script>
+```
+
+#### Microdata Example
+
+```html
+<div itemscope itemtype="http://schema.org/SoftwareApplication">
+ Powered by <span itemprop="name">AwesomeBookingEngine</span> Version: <span itemprop="version">12.43</span> 
+</div>
+```
+
+Lets walk through this:
+
+#### @type
+
+Set this to [SoftwareApplication](http://schema.org/SoftwareApplication) 
+
+#### name
+
+The [name](https://schema.org/name) should contain the booking engine name
+
+#### version
+
+The [version](https://schema.org/version) should contain the booking engine version
+
 
 
 
