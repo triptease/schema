@@ -16,19 +16,21 @@ Triptease supports all three formats so if you are already using one then don’
 
 ### Getting started
 
-There are different levels of support for meta-data, it's best to start with the simplest and work your way up to more advanced features as you get more comfortable.
+There are different levels of support for meta-data, it's best to start with the simplest and work your way up to more advanced features as you get more comfortable. 
 
-1. [Identification](#identification)
-2. [Reservation](#reservation)
-3. [Search](#search)
-
+* [Identification](#identification)
+* [Reservation](#reservation)
+* [Lodging Search](#lodging-search)
+* [Offers for Hotel Rooms](#offers-for-hotel-rooms)
+  * [No availability](#no-availability)
 
 
 ### Identification
 
+*If you are already using another form of identification (apiKeys, propertyCodes etc) they you can safely skip this step*
+
 This is the simplest and most important meta data you can add through out your marketing website and booking engine. Ideally you want this on every page. 
-Doing this will automatically allow your hotel to appear on Google search pages and Google Maps. Just putting the hotel name and @type on each page will help Triptease 
-identify your hotel automatically 
+Doing this will automatically allow your hotel to appear on Google search pages and Google Maps. Just putting the hotel name and @type on each page will help Triptease identify your hotel automatically 
 
 #### JSON-LD Example
 
@@ -224,15 +226,6 @@ The [priceCurrency](https://schema.org/priceCurrency) is the three digit ISO cur
 
 
 
-### Search
-
-*Experimental: please contact your Direct Booking Coach before using*
-
-The final piece of the puzzle is to expose the structured data for when a customer searches for a hotel room. This is actually made up of two parts:
-
-1. [Lodging Search](#lodging-search)
-2. [Offers for Hotel Rooms](#offers-for-hotel-rooms)
-
 ### Lodging Search
 
 *Used by: Triptease*
@@ -383,6 +376,48 @@ price: The numeric value of the offer
 currency: The 3 character currency code of the offer
 
 unitText (optional): "Total" if the price is for the entire stay. "Nightly" if the price is per night. Defaults to "Nightly".
+
+
+### No availability
+
+*Used by: Triptease*
+
+This allow you to tell us you don't have any availability for the search just done
+
+#### JSON-LD Example
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "OfferCatalog",
+  "numberOfItems": 0
+}
+</script>
+```
+
+#### Microdata Example
+
+```html
+<div itemscope itemtype="http://schema.org/OfferCatalog">
+ <meta itemprop="numberOfItems" content="0"> 
+ No availaible rooms for the dates you searched
+</div>
+```
+
+Lets walk through this:
+
+#### @type
+
+Set this to [OfferCatalog](http://schema.org/OfferCatalog) 
+
+#### numberOfItems
+
+Just set this to zero so we know you have no availability
+
+
+
+
 
 ### Further Reading
 
