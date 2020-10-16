@@ -35,8 +35,7 @@ Advanced
 This is the simplest and most important meta data you can add through out your marketing website and booking engine. Ideally you want this on every page. 
 Doing this will automatically allow your hotel to appear on Google search pages and Google Maps. Just putting the hotel name and @type on each page will help Triptease identify your hotel automatically 
 
-<section>
-<input type="radio" name="format"/><label for="format">JSON-LD</label>
+#### JSON-LD Example
 
 ```html
 <script type="application/ld+json">
@@ -62,8 +61,7 @@ Doing this will automatically allow your hotel to appear on Google search pages 
 </script>
 ```
 
-<input type="radio" name="format"/><label for="format">Microdata</label>
-
+#### Microdata Example
 
 ```html
 <div itemscope itemtype="http://schema.org/Hotel">
@@ -85,7 +83,6 @@ Doing this will automatically allow your hotel to appear on Google search pages 
  </div>
 </div>
 ```
-</section>
 
 Lets walk through this:
 
@@ -147,8 +144,7 @@ After identifying the hotel, the next-most important data you can provide is the
 
 *Used by: Triptease*
 
-<section>
-<input type="radio" name="format"/><label for="format">JSON-LD</label>
+#### JSON-LD Example
 
 ```html
 <script type="application/ld+json">
@@ -166,7 +162,7 @@ After identifying the hotel, the next-most important data you can provide is the
 </script>
 ```
 
-<input type="radio" name="format"/><label for="format">Microdata</label>
+#### Microdata Example
 
 ```html
 <div itemscope itemtype="http://schema.org/LodgingReservation">
@@ -185,7 +181,6 @@ After identifying the hotel, the next-most important data you can provide is the
     </dl>
 </div>
 ```
-</section>
 
 Lets walk through this:
 
@@ -241,9 +236,7 @@ The [priceCurrency](https://schema.org/priceCurrency) is the three digit ISO cur
 These are the parameters the customer searched with. [schema.org](http://www.schema.org/) does not directly model these concepts so TripTease has made a small extension to capture
 these additional parameters while trying to keep to the same naming conventions and domain language.
 
-<section>
-
-<input type="radio" name="format"/><label for="format">JSON-LD</label>
+#### JSON-LD Example
 
 ```html
 <script type="application/ld+json">
@@ -259,7 +252,7 @@ these additional parameters while trying to keep to the same naming conventions 
 </script>
 ```
 
-<input type="radio" name="format"/><label for="format">Microdata</label>
+#### Microdata Example
 
 ```html
 <div itemscope itemtype="https://structured-data.triptease.io/LodgingSearch">
@@ -270,8 +263,6 @@ these additional parameters while trying to keep to the same naming conventions 
     <meta itemprop="numRooms" content="1"/>
 </div>
 ```
-
-</section>
 
 Lets walk through this:
 
@@ -319,9 +310,7 @@ These are the offer or rooms and rates the hotel has available for the specified
 
 Multiple offers can added to a page either inside a single script tag containing an array or multiple script/div tags etc.
 
-<section>
-
-<input type="radio" name="format"/><label for="format">JSON-LD</label>
+#### JSON-LD Example
 
 ```html
 <script type="application/ld+json">
@@ -345,7 +334,7 @@ Multiple offers can added to a page either inside a single script tag containing
 </script>
 ```
 
-<input type="radio" name="format"/><label for="format">Microdata</label>
+#### Microdata Example
 
 ```html
 <div itemscope itemtype="http://schema.org/Offer">
@@ -362,8 +351,6 @@ Multiple offers can added to a page either inside a single script tag containing
   </span>
 </div>
 ```
-
-</section>
 
 Lets walk through this:
 
@@ -401,9 +388,7 @@ unitText (optional): "Total" if the price is for the entire stay. "Nightly" if t
 
 This allow you to tell us you don't have any availability for the search just done
 
-<section>
-
-<input type="radio" name="format"/><label for="format">JSON-LD</label>
+#### JSON-LD Example
 
 ```html
 <script type="application/ld+json">
@@ -415,7 +400,7 @@ This allow you to tell us you don't have any availability for the search just do
 </script>
 ```
 
-<input type="radio" name="format"/><label for="format">Microdata</label>
+#### Microdata Example
 
 ```html
 <div itemscope itemtype="http://schema.org/OfferCatalog">
@@ -423,8 +408,6 @@ This allow you to tell us you don't have any availability for the search just do
  No availaible rooms for the dates you searched
 </div>
 ```
-
-</section>
 
 Lets walk through this:
 
@@ -445,9 +428,7 @@ Just set this to zero so we know you have no availability. See https://schema.or
 
 This allows you to tell us about your booking engine or marketing site. This is used purely for diagnosis 
 
-<section>
-
-<input type="radio" name="format"/><label for="format">JSON-LD</label>
+#### JSON-LD Example
 
 ```html
 <script type="application/ld+json">
@@ -460,15 +441,13 @@ This allows you to tell us about your booking engine or marketing site. This is 
 </script>
 ```
 
-<input type="radio" name="format"/><label for="format">Microdata</label>
+#### Microdata Example
 
 ```html
 <div itemscope itemtype="http://schema.org/SoftwareApplication">
  Powered by <span itemprop="name">AwesomeBookingEngine</span> Version: <span itemprop="version">12.43</span> 
 </div>
 ```
-
-</section>
 
 Lets walk through this:
 
