@@ -54,6 +54,11 @@ Doing this will automatically allow your hotel to appear on Google search pages 
   "postalCode": "W1 9B",
   "addressCountry": "United Kingdom"
   },
+  "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "15.234",
+      "longitude": "-80.3242"
+  },
  "telephone": "+44 1234 5678",
  "image": "http://example.com/image.png",
  "url": "http://example.com/"
@@ -74,6 +79,10 @@ Doing this will automatically allow your hotel to appear on Google search pages 
         <span itemprop="addressRegion">London</span>
         <span itemprop="postalCode">W1 9B</span>
         <span itemprop="addressCountry">United Kingdom</span>
+    </div>
+     <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+        latitude:<span itemprop="latitude">15.234</span>, 
+        longitude:<span itemprop="longitude">-80.3242</span>
     </div>
  <div>Telephone: <span itemprop="telephone">+44 1234 5678</span></div>
  <div>
@@ -113,7 +122,13 @@ The [brand](https://schema.org/brand) can help Triptease group your hotels toget
 
 #### address (Optional)
   
-The [address](https://schema.org/address) allows Triptease and Google to correctly associate your Hotel with it's location. At a minimum add the [postalCode](https://schema.org/postalCode).
+The [address](https://schema.org/address) allows Triptease and Google to correctly associate your Hotel with it's location. At a minimum add the [postalCode](https://schema.org/postalCode) and [addressCountry](https://schema.org/addressCountry).
+
+*Used by: Google, Triptease*
+
+#### geo (Optional)
+  
+The [geo](https://schema.org/geo) allows Triptease and Google to accurately display your Hotel  on a map.
 
 *Used by: Google, Triptease*
 
