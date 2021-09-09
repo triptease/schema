@@ -212,7 +212,7 @@ The [reservationId](https://schema.org/reservationId) should be unique and verif
 #### reservationStatus
 
 The [reservationStatus](https://schema.org/reservationStatus) should be set to [ReservationConfirmed](https://schema.org/ReservationConfirmed). 
-If you wish to expose reservations earlier in the funnel then make sure you use one of the other [ReservationStatusType](https://schema.org/ReservationStatusType).
+If you wish to expose reservations earlier in the funnel then make sure you use one of the other [ReservationStatusType](https://schema.org/ReservationStatusType). If you support cancellations please also add the correct structured data to that page and change the [reservationStatus](https://schema.org/reservationStatus) to [ReservationCancelled](https://schema.org/ReservationCancelled)
 
 
 #### checkinTime
