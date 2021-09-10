@@ -104,13 +104,13 @@ Make sure you set this to [Hotel](https://schema.org/Hotel), [LodgingBusiness](h
 
 #### name 
 
-The [name](https://schema.org/name) should be unique within your group or brand.
+The [name](https://schema.org/name) should be a unique name within your group or brand.
 
 *Used by: Google, Triptease*
 
 #### identifier (Optional) 
 
-The [identifier](https://schema.org/identifier) can be used set to a unique property ID.
+The [identifier](https://schema.org/identifier) should be a unique property code for your hotel.
 
 *Used by: Triptease*
 
