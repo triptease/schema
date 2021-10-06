@@ -329,7 +329,8 @@ Multiple offers can added to a page either inside a single script tag containing
 
 ```html
 <script type="application/ld+json">
-{
+[
+ {
   "@context": "http://schema.org/",
   "@type": "Offer",
   "itemOffered": {
@@ -345,7 +346,25 @@ Multiple offers can added to a page either inside a single script tag containing
     "priceCurrency": "USD",
     "unitText": "Nightly"
   }
-}
+ },
+  {
+  "@context": "http://schema.org/",
+  "@type": "Offer",
+  "itemOffered": {
+    "@type": "HotelRoom",
+    "name": "Deluxe Double",
+    "identifier": "DD-001"
+  },
+  "name": "Member Rate",
+  "identifier": "MER-001",
+  "priceSpecification": {
+    "@type": "UnitPriceSpecification",
+    "price": "88.00",
+    "priceCurrency": "USD",
+    "unitText": "Nightly"
+  }
+ }
+]
 </script>
 ```
 
