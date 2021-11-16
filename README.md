@@ -14,6 +14,10 @@ you may want to use the microdata format embedded in the HTML so that you keep t
 
 Triptease supports all three formats so if you are already using one then don’t worry about switching.
 
+### Handling Data Updates
+
+If you are a SPA (Single Page App) or support multiple updates on the same page (i.e. searches), please update the HTML/JSON in place. Do NOT keep adding additional elements as this will just corrupt the data.
+
 ### Getting started
 
 There are different levels of support for meta-data, it's best to start with the simplest and work your way up to more advanced features as you get more comfortable. 
